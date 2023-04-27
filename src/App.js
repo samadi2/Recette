@@ -1,18 +1,28 @@
 import './App.css';
-import Content from './components/Content';
-import Footer from './components/Footer';
+import  { BrowserRouter as Router, Routes, Route}   from 'react-router-dom';
+import Accueil from './pages/Accueil';
+import Recette from './pages/Recette';
+import Contact from './pages/Contact';
 import Sidebar from './components/Sidebar';
-import Titre from './components/Titre';
-
+import Footer from './components/Footer';
+import Titre from "./components/Titre";
 function App() {
   return (
-    <div className="">
+    <Router>
       <Sidebar />
-      <Titre  text="Contact" />
-      <Content />
+      <div>
+        <Titre text="Contact" />
+      </div>
+      <Routes>
+        <Route path='/Accueil' element={<Accueil/>} />
+        <Route path='/Contact' element={<Contact/>} />
+        <Route path='/Recette' element={<Recette/>} />
+      </Routes>
       <Footer />
-    </div>
-    
+    </Router>
+   
+
+
   );
 }
 

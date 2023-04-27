@@ -1,5 +1,6 @@
 import logo from '../logo-chef.jpg';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 function Sidebar() {
@@ -11,9 +12,21 @@ function Sidebar() {
             </div>
             
             <ul className='liste'>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Recette</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>
+                <Link to="/Accueil" >
+                    Accueil
+                </Link>
+                </li>
+                <li>
+                <Link to="/Recette" >
+                    Recette
+                </Link>
+                </li>
+                <li>
+                <Link to="/Contact" >
+                    Contact
+                </Link>
+                </li>
             </ul>
         </nav>
     )    
