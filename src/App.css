@@ -1,13 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+
+body
+{
+  font-family: 'Rajdhani', sans-serif;
+}
+
 .logo{
   width: 50px;
   height: 50px;
   align-items: center;
 }
+#menu__toggle {
+  opacity: 0;
+  margin-right: 2rem;
+  z-index: 999;
+  
+}
 
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+  z-index: 999;
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+  position: fixed;
+  background-color: black;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  
+  width: 2rem;
+  height: 5vh;
+  margin-left: 2rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: relative;
+
+  width: 100%;
+  height: 0.5vh;
+  
+
+  background-color:#B53636;
+  
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+  
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+
+  width: 300px;
+  height: 100%;
+  
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: beige;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+  z-index: 9;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: red;
+}
+
+.BurgerLogo
+{
+  display: flex;
+  
+}
+.logo
+{
+  width: 13vh;
+  height: 13vh;
+  position: absolute;
+  margin-left: -5rem;
+  
+}
+
+.nav
+{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  
+  padding: 1rem;
+  
+ 
+}
+nav a
+{
+  text-decoration: none;
+  margin-right: 1rem;
+  color : black;
+  font-size:larger;
+}
+nav a:hover
+{
+  text-decoration: overline red 3px solid;
+}
+nav a :visited
+{
+  color : red;
+  
+}
+.barnav
+{
+  display: flex;
+  justify-content: space-between;
+  background-color: #EDECEC;
+  height: 11vh;
+  position: relative;
+}
 .navbar{
   display: flex;
   justify-content: space-around;
   background: #EDECEC;
+}
+
+/* Accueil */
+#bloc1
+{
+  display: flex;
+  justify-content: space-between;
+  height: 50vh;
+  margin: 5rem;
+  position: relative;
+ 
+
+}
+.sousbloc1
+{
+  background-color: whitesmoke;
+  color: #9B3E3E;
+  height: 40vh;
+  width: 23vw;
+  position: relative;
+  border: 2px #9B3E3E solid;
+ 
+  
+}
+.sousbloc1:hover
+{
+  background-color: #626060;
+  position: relative;
+  border: 2px red solid;
+  color: white;
+}
+
+.content3bloc
+{
+  
+  margin: 7rem;
+  text-align: center;
 }
 
 .image , .liste {
@@ -29,7 +223,7 @@ a{
 
 .titre{
   margin-top: 2rem;
-  color: red;
+  color: #B53636;
   text-align: center;
 }
 

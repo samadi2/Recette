@@ -1,6 +1,9 @@
+import Titre from "../components/Titre";
+
 function Contact() {
     return (
         <div>
+            <Titre text="Contact" />
             <form action="">
                 <label htmlFor="nom">Nom</label>
                 <input className="int" type="text" id="nom" />
