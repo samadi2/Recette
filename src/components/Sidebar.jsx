@@ -7,19 +7,19 @@ import { Link, NavLink } from 'react-router-dom';
 
 function Sidebar() {
     return(
-        <div class="barnav">
+        <div className="barnav">
             
             <div className='BurgerLogo'>
-            <div class="hamburger-menu">
+            <div className="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
+            <label className="menu__btn" htmlFor="menu__toggle">
               <span></span>
             </label>
           
-            <ul class="menu__box">
-              <li><NavLink class="menu__item" to="/Recette">Recettes sucrées</NavLink></li>
-              <li><NavLink class="menu__item" to="/Recette">Recettes salées </NavLink></li>
-              <li><NavLink class="menu__item"  to="/Recette">Surprise</NavLink></li>
+            <ul className="menu__box">
+              <li><NavLink className="menu__item" to="/Recette">Recettes sucrées</NavLink></li>
+              <li><NavLink className="menu__item" to="/Recette">Recettes salées </NavLink></li>
+              <li><NavLink className="menu__item"  to="/Recette">Surprise</NavLink></li>
             </ul>
          
           </div>
@@ -29,7 +29,7 @@ function Sidebar() {
 
             
             <nav>
-                <ul class="nav">
+                <ul className="nav">
                     <li><NavLink to="/">Accueil</NavLink></li>
                     <li><NavLink to="/Recette">Recettes</NavLink></li>
                     <li><NavLink to="/Contact">Contact</NavLink></li>
